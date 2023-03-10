@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { BtnContext } from "./contexts/ButtonContext";
+import "./styles/app.css";
 
 function App() {
   const { buttons } = useContext(BtnContext);
@@ -20,10 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="buttons">
         {buttons.map((button, i) => {
           return <button key={i}
-            onClick={() => currentStateHandler(button)}>{button.name}</button>
+            onClick={() => currentStateHandler(button)}
+            className={current.value === button.value ? "current" : "inactive"}
+          >{button.name}</button>
         })}
       </div>
       {current.component}

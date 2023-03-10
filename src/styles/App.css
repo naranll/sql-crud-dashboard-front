@@ -1,3 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   width: 100%;
+}
+
+.buttons {
+  height: 80px;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.buttons button {
+  max-height: 51px;
+  height: 100%;
+  max-width: 280px;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+}
+
+.current {
+  color: #fff !important;
+  border-radius: 4px !important;
+  background-color: #8b89f9 !important;
 }
